@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Signup Page</title>
+
+     <!-- fontawesom icons -->
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+
+    <style>
+        *, ::before, ::after {margin: 0; padding: 0; box-sizing: border-box;}
+        label {display: inline-block;}
+        img {vertical-align: bottom;}
+        ul {list-style: none;}
+        a {text-decoration: none;}
+        button, input[type="submit"] {cursor: pointer; padding: 0;}
+        html {font: 16px/1.2 montserrat, system-ui, sans-serif;}
+        .img-resp {max-width: 100%; height: auto;}
+
+        .container {max-width: 1200px; margin: auto; padding: 1rem; background: #fff; box-shadow: 0 0 10px gray;}
+        .row {display: grid; grid-template-columns: repeat(12, 1fr);gap: 1rem;}
+        .col-1 {grid-column: span 1;}
+        .col-2 {grid-column: span 2;}
+        .col-3 {grid-column: span 3;}
+        .col-4 {grid-column: span 4;}
+        .col-5 {grid-column: span 5;}
+        .col-6 {grid-column: span 6;}
+        .col-7 {grid-column: span 7;}
+        .col-8 {grid-column: span 8;}
+        .col-9 {grid-column: span 9;}
+        .col-10 {grid-column: span 10;}
+        .col-11 {grid-column: span 11;}
+        .col-12 {grid-column: span 12;}
+
+        body {
+            background: linear-gradient(to left, #fdb67e, #f4f5cd);
+            display: flex;
+            min-height: 100vh;
+            align-items: center;
+        }
+
+        .col-left, .col-right {padding: 1rem; text-align: center; color: rgb(33, 33, 38);}
+        .col-left h2 {margin: 2rem auto 1.5rem;}
+        .col-left .social-icons {margin: 1rem auto; display: flex; justify-content: center;}
+        .social-icons a {
+            display: inline-block;
+            margin: 0 0.5rem;
+            width: 40px;
+            line-height: 40px;
+            border-radius: 15px;
+            color: rgb(152, 84, 84);
+            box-shadow: 0 0 4px rgb(194, 192, 192);
+            transition: 0.4s;
+        }
+        .social-icons a:hover {background: rgb(255, 168, 168); color: rgb(107, 74, 74);}
+        .col-left .email-msg{
+            position: relative;
+            width: 90%;
+            display: block;
+            text-align: center;
+            margin: 1.4rem auto;
+            line-height: 30px;
+            z-index: 2;
+        }
+
+        .col-left form input[type = "email"],
+        .col-left form input[type = "password"],
+        .col-left form input[type = "submit"],
+        .col-left form span {
+            width: 90%;
+            display: block;
+            margin: 1.3rem auto;
+            outline: none;
+            font-size: 1rem;
+            border: none;
+            background: rgb(255, 168, 168);
+            padding: 0.9rem;
+            border-radius: 6px;
+            transition: 0.4s;
+        }
+        .col-left form span {background: transparent;}
+        .col-left form input[type = "submit"]:hover {background: #333; color: #fee;}
+        .col-left form span {text-align: right;}
+        .col-left form input[type = "email"]:focus,
+        .col-left form input[type = "password"]:focus {
+            background: rgb(204, 142, 194);
+        }
+
+        .col-right h2 {margin: 1rem 0;}
+        .col-right p {margin: 2rem 0; font: 0.85rem/1.3 montserrat, system-ui, sans-serif;}
+        .col-right .sign-up-btn {
+            width: 120px;
+            height: 80px;
+            border: 1px solid;
+            padding: 0.2rem 2rem;
+            text-transform: uppercase;
+            border-radius: 4px;
+            font-weight: 600;
+            color: inherit;
+            transition: 0.4s;
+        }
+        .col-right .sign-up-btn:hover {background: #333; color: #fee;}
+        
+
+        
+
+        .col-right img {width: 60%; margin: auto; display: block;}
+
+        @media screen and (max-width: 768px) {
+            .col-m-12 {grid-column: span 12;}
+            .col-left, .col-right {padding: 0;}
+
+            .col-right img {width: 80%; margin: auto;}
+
+            .col-left form input[type = "email"],
+            .col-left form input[type = "password"],
+            .col-left form input[type = "submit"],
+            .col-left form span {
+                width: 100%;
+                margin: 0.9rem 0;
+            }
+            .col-left form span {padding: 0;}
+        }
+    </style>
+</head>
+
+
+
+<body>
+
+    <div class="container">
+        <div class="row">
+            <div class="col-6 col-m-12">
+                <div class="col-left">
+                    <h2>Sign In</h2>
+                    <div class="social-icons">
+                        <a href="#"><i class="fa-brands fa-google-plus-g"></i></a>
+                        <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+                        <a href="#"><i class="fa-brands fa-github"></i></a>
+                        <a href="#"><i class="fa-brands fa-linkedin-in"></i></a>
+                    </div>
+                    <div class="email-msg">Or use your email password</div>
+
+                    <form action="#">
+                        <input type="email" required placeholder="Email">
+                        <input type="password" required placeholder="Password">
+                        <span><a href="#">Forgot your password</a></span>
+                        <input type="submit" value="Submit">
+                    </form>
+                </div>
+            </div>
+
+            <div class="col-6 col-m-12">
+                <div class="col-right">
+                    <div class="sign-up">
+                        <h2>Hello, Friend!</h2>
+                        <img src="../../images/contact.png" width="500" height="406" alt="contact-image" class="img-resp">
+                        <p class="sign-up-msg">Create an account with your personal details to gain full access to all the features and the benefits our site has to offer.</p>
+                        <a href="#" class="sign-up-btn">Sign Up</a>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    
+</body>
+</html>
